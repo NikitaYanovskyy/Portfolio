@@ -1,0 +1,208 @@
+@font-face{
+    font-family: Poppins;
+    src: url('./Poppins-Regular.ttf');
+}
+
+//Variables
+$Yellow:  #FFF84E;
+$Gray: rgb(170, 169, 169);
+
+@mixin maxWidth {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+@import "./scss/landing";
+@import "./scss/about";
+@import "./scss/skills-abilities";
+@import "./scss/projects";
+//Classes for animation
+body{
+    overflow: hidden;
+}
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    color: #000;
+    text-decoration: none;
+    font-family: Poppins;
+}
+.background-block{
+    position: absolute;
+    width: 161px;
+    height: 161px;
+    background-color: Yellow;
+    opacity: 0.4;
+    z-index: -1;
+}
+.begining-animation-block{
+    transition: all 2s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(100% at 50% 50%);
+    transform: translate(-50%, -50%);
+    background-color: #FFF84E;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1{
+        position: relative;    
+    }
+    .show-hide-anim{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #FFF84E;
+    }  
+}
+.icon{
+    width: 34px;
+    height: 34px;
+}
+
+@media screen and( max-width: 1024px){
+    .section-margin{
+        padding: 0 20px;
+        overflow: hidden;
+    }
+    ////////////////////////////////////////////////////////////// Projects
+    
+    .project{
+        flex-direction: column;
+        margin-bottom: 200px;
+    }
+    .project-image-description{
+        width: 100%;
+    }
+    
+    .project-info{
+        margin-top: 30px;
+        .project-info-text{
+            .project-background-block-yellow{
+                top: 0;
+            }
+            .project-background-block-gray{
+                top: 90px;
+            }
+        }
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 768px){
+    .about{
+        height: auto;
+        margin-bottom: 50px;
+
+    }
+    .about-wrapper{
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .about-content{
+        padding: 0 !important;
+        margin: 70px 20px 0 20px;
+    }
+    .about-photo-text{
+        padding-top: 70px !important;
+        width: auto;
+        margin: 0 50px 0 20px;
+        img{
+            width: 100%;
+            height: 450px;
+        }
+    }
+    .about-text{
+        width: 100%;
+    }
+    //Background-block-1
+.about-background-block1{
+    display: none;
+    }
+//Background-block-2
+.about-background-block2{
+bottom: -55px;
+right: -55px;
+}
+    /////////////////////////////////////////////////////////////////////////////////////////////////////Skills
+    .skills-abilities{
+        margin-top: 100px;
+    }
+    .skills-abilities-wrapper{
+        flex-direction: column;
+    }
+    .skills-abilities-photo{
+        margin-top: 30px;
+        img{
+            height: 500px;
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+@media screen and( max-width: 425px){
+    .landing-side-block{
+        display: none;
+    }
+    .landing-block-yellow{
+        transform: none !important;
+    }
+    .landing-block-gray{
+        transform: none !important;
+    }
+    .landing-info{
+        margin-bottom: 80px;
+    }
+    .landing-down{
+        margin-bottom: 80px;
+    }
+    ////////////////////////////////////////////////////Skills
+    .skills-abilities-photo{
+        img{
+            height: 300px;
+        }
+    }
+    /////////////////////////////////////////////////////Projects
+    .i-have-created{
+        .i-have-created-wrapper{
+            p{
+                margin: 0;
+                text-align: center;
+            }
+        } 
+    }
+    .project{
+        margin-bottom: 0;
+    }
+    .project-description{
+        display: none;
+    }
+    .project-info-line{
+        width: 200px !important;
+    }
+    .hidden-description{
+        display: block;
+    }
+    .project-info{
+        h1{
+            font-size: 22px;
+        }
+        .project-info-text{
+            .project-background-block-yellow{
+                display: none;
+            }
+            .project-background-block-gray{
+                display: none;
+            }
+        }
+    }
+}
