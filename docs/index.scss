@@ -4,7 +4,7 @@
 }
 
 //Variables
-$Yellow:  #FFF84E;
+$MainColor:  rgb(78, 214, 255);
 $Gray: rgb(170, 169, 169);
 
 @mixin maxWidth {
@@ -15,11 +15,38 @@ $Gray: rgb(170, 169, 169);
 @import "./scss/about";
 @import "./scss/skills-abilities";
 @import "./scss/projects";
+@import "./scss/footer";
 //Classes for animation
 body{
     overflow: hidden;
 }
-
+.big-background-block-1{
+    position: absolute;
+    top: 300vh;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background-color: $MainColor;
+    opacity: 0.4;
+}
+.big-background-block-2{
+    position: absolute;
+    top: 370vh;
+    left: 30%;
+    width: 100px;
+    height: 100px;
+    background-color: $MainColor;
+    opacity: 0.4;
+}
+.big-background-block-3{
+    position: absolute;
+    top: 420vh;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: $MainColor;
+    opacity: 0.4;
+}
 *,*::before,*::after{
     margin: 0;
     padding: 0;
@@ -33,20 +60,20 @@ body{
     position: absolute;
     width: 161px;
     height: 161px;
-    background-color: Yellow;
+    background-color: $MainColor;
     opacity: 0.4;
     z-index: -1;
 }
 .begining-animation-block{
-    transition: all 2s ease-in-out;
     position: absolute;
     top: 50%;
     left: 50%;
     width: 100%;
     height: 100%;
     clip-path: circle(100% at 50% 50%);
+    transition: clip-path 2s ease-in-out;
     transform: translate(-50%, -50%);
-    background-color: #FFF84E;
+    background-color: $MainColor;
     z-index: 10;
     display: flex;
     flex-direction: column;
@@ -62,7 +89,7 @@ body{
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #FFF84E;
+        background-color: $MainColor;
     }  
 }
 .icon{
@@ -71,6 +98,17 @@ body{
 }
 
 @media screen and( max-width: 1024px){
+    ///////////////////////////////////////////////////////////////Background-blocks
+    .big-background-block-1{
+        top: 200vh;
+    }
+    .big-background-block-2{
+        top: 320vh;
+    }
+    .big-background-block-3{
+        top: 370vh;
+    }
+    ///////////////////////////////////////////////////////////////Section-margin
     .section-margin{
         padding: 0 20px;
         overflow: hidden;
@@ -99,6 +137,17 @@ body{
     }
 }
 @media screen and (max-width: 768px){
+    ///////////////////////////////////////////////////////////////Background-blocks
+    .big-background-block-1{
+        top: 400vh;
+    }
+    .big-background-block-2{
+        top: 450vh;
+    }
+    .big-background-block-3{
+        top: 620vh;
+    }
+    /////////////////////////////////////////////////////////////////About
     .about{
         height: auto;
         margin-bottom: 50px;
@@ -119,6 +168,11 @@ body{
         img{
             width: 100%;
             height: 450px;
+        }
+    }
+    .landing-info{
+        p{
+            letter-spacing: unset;
         }
     }
     .about-text{
@@ -148,8 +202,32 @@ right: -55px;
             margin-left: 0;
         }
     }
+    /////////////////////////////////////////////////////////////////////////////////////////////////////Footer
+    .footer-lines{
+        transform: none !important;
+    }
+    .contact-info{
+        transform: none !important;
+    }
+    .footer-right{
+        transform: none !important;
+    }
 }
 @media screen and( max-width: 425px){
+    ///////////////////////////////////////////////////////////////Background-blocks
+    .big-background-block-1{
+        top: 350vh;
+    }
+    .big-background-block-2{
+        top: 500vh;
+        left: 30%;
+    }
+    .big-background-block-3{
+        top: 720vh;
+        left: 70%;
+
+    }
+    //////////////////////////////////////////////////////////////////Landing
     .landing-side-block{
         display: none;
     }
@@ -160,10 +238,10 @@ right: -55px;
         transform: none !important;
     }
     .landing-info{
-        margin-bottom: 80px;
+        margin-bottom: 50px;
     }
     .landing-down{
-        margin-bottom: 80px;
+        margin-bottom: 50px;
     }
     ////////////////////////////////////////////////////Skills
     .skills-abilities-photo{
@@ -203,6 +281,15 @@ right: -55px;
             .project-background-block-gray{
                 display: none;
             }
+        }
+    }
+    ///////////////////////////////////////////////////////////////Footer
+    .contact-info p:nth-of-type(2){
+        margin-bottom: 20px;
+    }
+    .footer-right{
+        h1{
+            font-size: 20px;
         }
     }
 }

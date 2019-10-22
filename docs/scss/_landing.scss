@@ -1,12 +1,14 @@
 .landing{
     height: 100vh;
-    overflow: hidden;
     transition: background-color, 0.3s ease-in;
+    overflow: hidden !important;
+
 }
 .landing-wrapper{
     @include maxWidth;
     position: relative;
     height: 100vh;
+    overflow: hidden !important;
     p{
         cursor: default;
     }
@@ -37,7 +39,9 @@
     bottom: 0;
     margin-bottom: 50px;
     p{
-        color: rgb(110, 110, 110);
+        letter-spacing: 2px;
+        color: #000;
+        font-weight: bold;
     }
 }
 .landing-blocks{
@@ -58,7 +62,7 @@
         transition: background-color 0.3s ease-in;
         top: 0;
         left: 0;
-        background-color: #FFF84E;
+        background-color: $MainColor;
     }
     .landing-block-gray{
         top: 150px;
@@ -69,12 +73,11 @@
 .landing-side-block{
     transition: background-color 0.3s ease-in;
     position: absolute;
-    z-index: 1;
-    right: 0;
+    right: -10%;
     top: 0;
-    width: 250px;
+    width: 30vh;
     height: 100%;
-    background-color: #FFF84E;
+    background-color: $MainColor;
 }
 .landing-scroll-or-yes{
     position: absolute;

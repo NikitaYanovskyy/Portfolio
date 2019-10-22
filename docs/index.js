@@ -26,13 +26,18 @@ $(`.begining-animation-block`).delay(2800).animate({position: 50},{
     }
 })
 $('body').delay(3700).queue(function(next){
-$(this).css('overflow', 'visible');
+$(this).css('overflow-y', 'visible');
+$(this).css('overflow-x', 'hidden');
 next();
 })
 //////////////////////////////////////////////////////////////////////////////Opening animation (end)
 //////////////////////////////////////////////////////////////////////////////Mouse move landing & landing block hover
-$('.landing').mousemove((event)=>{
-  $(".landing-block-yellow").css({
+
+$('.begining-animation-block, .landing').mousemove((event)=>{
+  $('.landing-side-block').css({
+    'right': event.pageX * -1/22+'px'
+  }) 
+    $(".landing-block-yellow").css({
     'transform': 'translate3d('+event.pageX * 1/52+'px, '+event.pageY * 1/52+'px,0)',
   })
   $(".landing-block-gray").css({
@@ -49,16 +54,16 @@ $('.begining-animation-block').mousemove((event)=>{
 })
 
 $('.landing-block').mouseover(()=>{
-  $('.landing').css('background-color','#FFF84E');  
+  $('.landing').css('background-color','rgb(78, 214, 255)');  
             $('.landing-block-yellow').css('background-color','#fff');  
             $('.landing-side-block').css('background-color','#fff');  
-            $('.landing-side-block').css('opacity','1');  
+            $('.landing-side-block').css('opacity','1'); 
 })
 $('.landing-block').mouseout(()=>{
   $('.landing').css('background-color','#fff');  
-            $('.landing-block-yellow').css('background-color','#FFF84E');  
-            $('.landing-side-block').css('background-color','rgb(255, 248, 78)');
-            $('.landing-side-block').css('opacity','1');  
+            $('.landing-block-yellow').css('background-color','rgb(78, 214, 255)');  
+            $('.landing-side-block').css('background-color','rgb(78, 214, 255)');
+            $('.landing-side-block').css('opacity','1'); 
   
 })
 //////////////////////////////////////////////////////////////////////////////Mouse move landing & landing block hover (end)
@@ -73,13 +78,13 @@ $('.landing-down').click(()=>{
 //////////////////////////////////////////////////////////////////////////////Landing background-transition
     $(window).scroll(function(){
         if($(this).scrollTop() > 0){
-            $('.landing').css('background-color','#FFF84E');  
+            $('.landing').css('background-color','rgb(78, 214, 255)');  
             $('.landing-block-yellow').css('background-color','#fff');  
             $('.landing-side-block').css('background-color','#fff');  
           }else{
             $('.landing').css('background-color','#fff');  
-            $('.landing-block-yellow').css('background-color','#FFF84E');  
-            $('.landing-side-block').css('background-color','rgb(255, 248, 78)');  
+            $('.landing-block-yellow').css('background-color','rgb(78, 214, 255)');  
+            $('.landing-side-block').css('background-color','rgb(78, 214, 255)');  
           }
     })
 })
@@ -87,22 +92,7 @@ $('.landing-down').click(()=>{
 
 
 
-//////////////////////////////////////////////////////////////////////////////Skills-background 
-  $(window).scroll(function(){
-    if($(this).scrollTop() > $('.skills-abilities').offset().top - 500){
-      $('.skills-abilities-background').css({
-        'left' :  '100%'
-      })
-    } 
-  })
-  $(window).scroll(function(){
-    if($(this).scrollTop() < $('.skills-abilities').offset().top - 500){
-      $('.skills-abilities-background').css({
-        'left' :  '0'
-      })
-    } 
-  })
-//////////////////////////////////////////////////////////////////////////////Skills-background (end)
+
 
 //////////////////////////////////////////////////////////////////////////////I have created animation <-- (block)
 
@@ -131,4 +121,49 @@ if(window.matchMedia("(max-width: 768px)").matches){
 var rellax = new Rellax('.rellax');
 
 //////////////////////////////////////////////////////////////////////////////About-parallax (end)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////Footer-btn-up
+$('.footer-btn-up').click(()=>{
+  $('body, html').animate({
+    scrollTop: 0
+  }, 1500)
+})
+//////////////////////////////////////////////////////////////////////////////////////////////////Footer-btn-up (end)
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////Projects-animation
+$('.project').attr('style', 'margin-top: 250px !important; opacity: 0 !important');
+$(window).scroll(()=>{
+  if($(this).scrollTop() > $('.project:nth-of-type(1)').offset().top - 700){
+    $('.projects-container .project:nth-of-type(1)').attr('style', 'margin-top: 100px !important; opacity: 1 !important')
+  }
+  if($(this).scrollTop() > $('.project:nth-of-type(2)').offset().top - 700){
+    $('.projects-container .project:nth-of-type(2)').attr('style', 'margin-top: 100px !important; opacity: 1 !important')
+
+  }
+})
+//////////////////////////////////////////////////////////////////////////////////////////////////Projects-animation (end)
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////Footer stuff
+$(window).scroll(()=>{
+  if($(this).scrollTop() > $('footer').offset().top - 500){
+    $('.footer-lines .footer-line:nth-of-type(1)').css('width', '80%')
+    $('.footer-lines .footer-line:nth-of-type(2)').css('width', '60%')
+    $('.footer-lines .footer-line:nth-of-type(3)').css('width', '40%')
+  }
+})
+$('.footer-lines').mouseover(()=>{
+  $('.footer-lines .footer-line:nth-of-type(1)').css('width', '0')
+  $('.footer-lines .footer-line:nth-of-type(2)').css('width', '0')
+  $('.footer-lines .footer-line:nth-of-type(3)').css('width', '0')
+})
+$('.footer-lines').mouseout(()=>{
+  $('.footer-lines .footer-line:nth-of-type(1)').css('width', '80%')
+  $('.footer-lines .footer-line:nth-of-type(2)').css('width', '60%')
+  $('.footer-lines .footer-line:nth-of-type(3)').css('width', '40%')
+})
+//////////////////////////////////////////////////////////////////////////////////////////////////Footer stuff (end)
+
+
 
