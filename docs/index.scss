@@ -1,6 +1,6 @@
 @font-face{
     font-family: Poppins;
-    src: url('./Poppins-Regular.ttf');
+    src: url('./fonts/main-font.ttf');
 }
 
 //Variables
@@ -19,10 +19,11 @@ $Gray: rgb(170, 169, 169);
 //Classes for animation
 body{
     overflow: hidden;
+    font-weight: bold !important;
 }
 .big-background-block-1{
     position: absolute;
-    top: 300vh;
+    top: 1360px;
     right: 0;
     width: 300px;
     height: 300px;
@@ -31,7 +32,7 @@ body{
 }
 .big-background-block-2{
     position: absolute;
-    top: 370vh;
+    top: 1967px;
     left: 30%;
     width: 100px;
     height: 100px;
@@ -40,7 +41,7 @@ body{
 }
 .big-background-block-3{
     position: absolute;
-    top: 420vh;
+    top: 2832px;
     left: 50%;
     width: 100px;
     height: 100px;
@@ -100,13 +101,13 @@ body{
 @media screen and( max-width: 1024px){
     ///////////////////////////////////////////////////////////////Background-blocks
     .big-background-block-1{
-        top: 200vh;
+        top: 1520px;
     }
     .big-background-block-2{
-        top: 320vh;
+        top: 2432px;
     }
     .big-background-block-3{
-        top: 370vh;
+        top: 2812px;
     }
     ///////////////////////////////////////////////////////////////Section-margin
     .section-margin{
@@ -139,13 +140,13 @@ body{
 @media screen and (max-width: 768px){
     ///////////////////////////////////////////////////////////////Background-blocks
     .big-background-block-1{
-        top: 400vh;
+        top: 2280px;
     }
     .big-background-block-2{
-        top: 450vh;
+        top: 2565px;
     }
     .big-background-block-3{
-        top: 620vh;
+        top: 3534px;
     }
     /////////////////////////////////////////////////////////////////About
     .about{
@@ -216,14 +217,14 @@ right: -55px;
 @media screen and( max-width: 425px){
     ///////////////////////////////////////////////////////////////Background-blocks
     .big-background-block-1{
-        top: 350vh;
+        top: 1995px;
     }
     .big-background-block-2{
-        top: 500vh;
+        top: 2850px;
         left: 30%;
     }
     .big-background-block-3{
-        top: 720vh;
+        top: 4104px;
         left: 70%;
 
     }

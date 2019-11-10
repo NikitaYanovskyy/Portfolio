@@ -22,11 +22,10 @@ right: 0;
     flex: 1;
     img{
         width: 80%;
-        height: 500px;
+        height: 560px;
         object-fit: cover;
     }
     p{
-        width: 50px;
         span{
         color: rgb(170, 169, 169);
         }
@@ -34,11 +33,11 @@ right: 0;
         font-weight: bold;
         text-align: center;
         writing-mode: vertical-lr;
-        transform: rotate(-180deg);
     }
 }
 .about-text{
     font-size: 18px;
+    line-height: 30px;
 }
 .about-content{
     margin-left: 50px;

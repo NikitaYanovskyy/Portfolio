@@ -166,4 +166,86 @@ $('.footer-lines').mouseout(()=>{
 //////////////////////////////////////////////////////////////////////////////////////////////////Footer stuff (end)
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////Languages
+function English (get){  
+  //Landing
+  $('.landing-title h1').text(get['eng']['landing']['moto']); 
+  $('.landing-info p').html(get['eng']['landing']['who-am-i']); 
+  $('.landing-scroll-or-yes p').text(get['eng']['landing']['scroll-or-yes']); 
+  //About
+  $('.about-content h1').text(get['eng']['about']['who-am-i(1)']);
+  $('.about-content h3').text(get['eng']['about']['who-am-i(2)']);
+  $('.about-photo-text p').html(get['eng']['about']['a-little-bit']);
+  $('.about-text p').text(get['eng']['about']['biography']);
+  //Skills & Abilities
+  $('.skills-text h1').html(get['eng']['skills-abilities']['title']);
+  $('.skills-text h2').html(get['eng']['skills-abilities']['skills-abilities-intro']);
+  $('.skills-list ul li:nth-of-type(2)').text(get['eng']['skills-abilities']['CSS']);
+  $('.skills-list ul li:nth-of-type(3)').text(get['eng']['skills-abilities']['JavaScript']);
+  $('.skills-list ul li:nth-of-type(4)').text(get['eng']['skills-abilities']['Scss']);
+  $('.skills-list ul li:nth-of-type(5)').text(get['eng']['skills-abilities']['GitHub']);
+  $('.skills-list ul li:nth-of-type(6)').text(get['eng']['skills-abilities']['Responsive']);
+  $('.skills-list ul li:nth-of-type(7)').text(get['eng']['skills-abilities']['Owl']);
+  //I Have Created
+  $('.i-have-created-wrapper p').text(get['eng']['i-have-created']['i-have-created-text']);
+  $('.i-have-created-white-block p').text(get['eng']['i-have-created']['i-have-created-text']);
+  //Projects
+  $('.project-1 .project-description p').text(get['eng']['projects']['project1']['description']);
+  $('.project-1 .hidden-description p').text(get['eng']['projects']['project1']['description']);
+  $('.project-1 .project-info-text h1').text(get['eng']['projects']['project1']['title']);
+  $('.project-1 .date').text(get['eng']['projects']['project1']['date']);
+  $('.project-1 .original').text(get['eng']['projects']['project1']['original']);
+}
 
+function Ukrainian (get){  
+  //Landing
+  $('.landing-title h1').text(get['ukr']['landing']['moto']); 
+  $('.landing-info p').html(get['ukr']['landing']['who-am-i']); 
+  $('.landing-scroll-or-yes p').text(get['ukr']['landing']['scroll-or-yes']); 
+  //About
+  $('.about-content h1').text(get['ukr']['about']['who-am-i(1)']);
+  $('.about-content h3').text(get['ukr']['about']['who-am-i(2)']);
+  $('.about-photo-text p').html(get['ukr']['about']['a-little-bit']);
+  $('.about-text p').text(get['ukr']['about']['biography']);
+  //Skills & Abilities
+  $('.skills-text h1').html(get['ukr']['skills-abilities']['title']);
+  $('.skills-text h2').html(get['ukr']['skills-abilities']['skills-abilities-intro']);
+  $('.skills-list ul li:nth-of-type(2)').text(get['ukr']['skills-abilities']['CSS']);
+  $('.skills-list ul li:nth-of-type(3)').text(get['ukr']['skills-abilities']['JavaScript']);
+  $('.skills-list ul li:nth-of-type(4)').text(get['ukr']['skills-abilities']['Scss']);
+  $('.skills-list ul li:nth-of-type(5)').text(get['ukr']['skills-abilities']['GitHub']);
+  $('.skills-list ul li:nth-of-type(6)').text(get['ukr']['skills-abilities']['Responsive']);
+  $('.skills-list ul li:nth-of-type(7)').text(get['ukr']['skills-abilities']['Owl']);
+  //I Have Created
+  $('.i-have-created-wrapper p').text(get['ukr']['i-have-created']['i-have-created-text']);
+  $('.i-have-created-white-block p').text(get['ukr']['i-have-created']['i-have-created-text']);
+  //Projects
+  $('.project-1 .project-description p').text(get['ukr']['projects']['project1']['description']);
+  $('.project-1 .hidden-description p').text(get['ukr']['projects']['project1']['description']);
+  $('.project-1 .project-info-text h1').text(get['ukr']['projects']['project1']['title']);
+  $('.project-1 .date').text(get['ukr']['projects']['project1']['date']);
+  $('.project-1 .original').text(get['ukr']['projects']['project1']['original']);
+}
+
+
+
+$('.eng-btn').click(()=>{
+  let requestLNG = new XMLHttpRequest();
+  requestLNG.open('GET', './json/text.json');
+  requestLNG.responseType = 'json';
+  requestLNG.send();
+  requestLNG.onload = function(){
+      English(requestLNG.response);
+  }
+})
+
+
+$('.ukr-btn').click(()=>{
+  let requestLNG = new XMLHttpRequest();
+  requestLNG.open('GET', './json/text.json');
+  requestLNG.responseType = 'json';
+  requestLNG.send();
+  requestLNG.onload = function(){
+      Ukrainian(requestLNG.response);
+  }
+})

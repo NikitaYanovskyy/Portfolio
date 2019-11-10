@@ -8,7 +8,6 @@
     @include maxWidth;
     position: relative;
     height: 100vh;
-    overflow: hidden !important;
     p{
         cursor: default;
     }
@@ -39,9 +38,8 @@
     bottom: 0;
     margin-bottom: 50px;
     p{
-        letter-spacing: 2px;
+        letter-spacing: 3px !important;
         color: #000;
-        font-weight: bold;
     }
 }
 .landing-blocks{
@@ -96,4 +94,29 @@
     bottom: 0;
     right: 0;
     margin-bottom: 50px;
+}
+/////////////////////////////Language-block
+.language-block{
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    bottom: 100px;
+    text-align: right;
+    .language-item span{
+        cursor: pointer;
+        position: relative;
+        font-weight: bold;
+        .language-line{
+            transition: width, 0.2s ease-in-out;
+            position: absolute;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: #000;
+        }
+        &:hover .language-line{
+            width: 100%;
+        }
+    }
+   
 }
