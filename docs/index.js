@@ -195,7 +195,17 @@ function English (get){
   $('.project-1 .project-info-text h1').text(get['eng']['projects']['project1']['title']);
   $('.project-1 .date').text(get['eng']['projects']['project1']['date']);
   $('.project-1 .original').text(get['eng']['projects']['project1']['original']);
+
+  $('.project-2 .project-description p').text(get['eng']['projects']['project2']['description']);
+  $('.project-2 .hidden-description p').text(get['eng']['projects']['project2']['description']);
+  $('.project-2 .project-info-text h1').text(get['eng']['projects']['project2']['title']);
+  $('.project-2 .date').text(get['eng']['projects']['project2']['date']);
+  $('.project-2 .original').text(get['eng']['projects']['project2']['original']);
+  //Footer
+  $('footer h1').text(get['eng']['footer']['last-text']);
 }
+
+
 
 function Ukrainian (get){  
   //Landing
@@ -225,11 +235,56 @@ function Ukrainian (get){
   $('.project-1 .project-info-text h1').text(get['ukr']['projects']['project1']['title']);
   $('.project-1 .date').text(get['ukr']['projects']['project1']['date']);
   $('.project-1 .original').text(get['ukr']['projects']['project1']['original']);
+
+  $('.project-2 .project-description p').text(get['ukr']['projects']['project2']['description']);
+  $('.project-2 .hidden-description p').text(get['ukr']['projects']['project2']['description']);
+  $('.project-2 .project-info-text h1').text(get['ukr']['projects']['project2']['title']);
+  $('.project-2 .date').text(get['ukr']['projects']['project2']['date']);
+  $('.project-2 .original').text(get['ukr']['projects']['project2']['original']);
+  //Footer
+  $('footer h1').text(get['ukr']['footer']['last-text']);
+}
+
+function Russian (get){  
+  //Landing
+  $('.landing-title h1').text(get['rus']['landing']['moto']); 
+  $('.landing-info p').html(get['rus']['landing']['who-am-i']); 
+  $('.landing-scroll-or-yes p').text(get['rus']['landing']['scroll-or-yes']); 
+  //About
+  $('.about-content h1').text(get['rus']['about']['who-am-i(1)']);
+  $('.about-content h3').text(get['rus']['about']['who-am-i(2)']);
+  $('.about-photo-text p').html(get['rus']['about']['a-little-bit']);
+  $('.about-text p').text(get['rus']['about']['biography']);
+  //Skills & Abilities
+  $('.skills-text h1').html(get['rus']['skills-abilities']['title']);
+  $('.skills-text h2').html(get['rus']['skills-abilities']['skills-abilities-intro']);
+  $('.skills-list ul li:nth-of-type(2)').text(get['rus']['skills-abilities']['CSS']);
+  $('.skills-list ul li:nth-of-type(3)').text(get['rus']['skills-abilities']['JavaScript']);
+  $('.skills-list ul li:nth-of-type(4)').text(get['rus']['skills-abilities']['Scss']);
+  $('.skills-list ul li:nth-of-type(5)').text(get['rus']['skills-abilities']['GitHub']);
+  $('.skills-list ul li:nth-of-type(6)').text(get['rus']['skills-abilities']['Responsive']);
+  $('.skills-list ul li:nth-of-type(7)').text(get['rus']['skills-abilities']['Owl']);
+  //I Have Created
+  $('.i-have-created-wrapper p').text(get['rus']['i-have-created']['i-have-created-text']);
+  $('.i-have-created-white-block p').text(get['rus']['i-have-created']['i-have-created-text']);
+  //Projects
+  $('.project-1 .project-description p').text(get['rus']['projects']['project1']['description']);
+  $('.project-1 .hidden-description p').text(get['rus']['projects']['project1']['description']);
+  $('.project-1 .project-info-text h1').text(get['rus']['projects']['project1']['title']);
+  $('.project-1 .date').text(get['rus']['projects']['project1']['date']);
+  $('.project-1 .original').text(get['rus']['projects']['project1']['original']);
+
+  $('.project-2 .project-description p').text(get['rus']['projects']['project2']['description']);
+  $('.project-2 .hidden-description p').text(get['rus']['projects']['project2']['description']);
+  $('.project-2 .project-info-text h1').text(get['rus']['projects']['project2']['title']);
+  $('.project-2 .date').text(get['rus']['projects']['project2']['date']);
+  $('.project-2 .original').text(get['rus']['projects']['project2']['original']);
+  //Footer
+  $('footer h1').text(get['rus']['footer']['last-text']);
 }
 
 
-
-$('.eng-btn').click(()=>{
+$('.us-btn').click(()=>{
   let requestLNG = new XMLHttpRequest();
   requestLNG.open('GET', './json/text.json');
   requestLNG.responseType = 'json';
@@ -240,12 +295,22 @@ $('.eng-btn').click(()=>{
 })
 
 
-$('.ukr-btn').click(()=>{
+$('.ua-btn').click(()=>{
   let requestLNG = new XMLHttpRequest();
   requestLNG.open('GET', './json/text.json');
   requestLNG.responseType = 'json';
   requestLNG.send();
   requestLNG.onload = function(){
       Ukrainian(requestLNG.response);
+  }
+})
+
+$('.ru-btn').click(()=>{
+  let requestLNG = new XMLHttpRequest();
+  requestLNG.open('GET', './json/text.json');
+  requestLNG.responseType = 'json';
+  requestLNG.send();
+  requestLNG.onload = function(){
+      Russian(requestLNG.response);
   }
 })

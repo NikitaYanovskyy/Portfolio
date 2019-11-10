@@ -86,9 +86,13 @@
             background-color: $MainColor;
         }
         .original{
+            transition: color 0.3s ease-in-out;
             display: flex;
             align-items: center;
             width: fit-content;
+            &:hover{
+                color: gray;
+            }
         }
     }
     &:hover .project-description{

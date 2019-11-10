@@ -9,7 +9,7 @@
         "about":
         {
             "who-am-i(1)": "Nikita Yanovskii",
-            "who-am-i(2)": "Self-taught web designer",
+            "who-am-i(2)": "Self-taught web-developer",
             "a-little-bit": "<span>A little bit about myself</span>",
             "biography": "I’m an 18 year old secont-year student of Uzhgorod National University, faculty of Informational technologies. From high school i was passionate about web-development. University doesn’t give me enougn information about this field, so I study most of the stuff by myself. I enjoy this process very much, and now i’m very confindent about my knowledge."
         },
@@ -44,7 +44,7 @@
             }
         },
         "footer":{
-            "last-text": "I hope i gave you the experience you expected."
+            "last-text": "I hope i fulfilled your expectations."
         }
     },
 
@@ -60,48 +60,100 @@
         "landing":
         {
             "moto": "Я роблю веб сторінки у свій вільний час",
-            "who-am-i": "Яновський Нікіта <br> Веб розробник",
+            "who-am-i": "Яновський Нікіта <br> Веб-розробник",
             "scroll-or-yes": "Скроль або так"
         },
         "about":
         {
             "who-am-i(1)": "Яновський Нікіта",
-            "who-am-i(2)": "Веб розробник-самоучка",
+            "who-am-i(2)": "Веб-розробник - самоучка",
             "a-little-bit": "<span>Трохи про себе</span>",
-            "biography": "Я вісімнадцятирічний студент Ужгородського Національного університету, факультет інформаційних технологій.Я захоплююсь веб розробкою зі старшої школи. Нажаль університет дає лише поверхові знання, тому більшість поглибленої частини я вчу сам. Мені подобається цей процес павчання, і зараз я впевнений у своїх знаннях."
+            "biography": "Я вісімнадцятирічний студент Ужгородського Національного університету, факультет інформаційних технологій.Я захоплююсь веб розробкою зі старшої школи. Нажаль університет дає лише поверхові знання, тому більшість поглибленої частини я вчу сам. Мені подобається цей процес навчання, і зараз я впевнений у своїх знаннях."
         },
         "skills-abilities":
         {
             "title": "Навички & <br>Здібності<div class='skills-background-block background-block'></div>",
             "skills-abilities-intro": "Останні два роки я вивчав<br>веб-дизайн, і зараз я володію <br><span>знаннями</span>",
-            "CSS": "CSS (including CSS Grid and CSS Flexbox)",
-            "JavaScript": "JavaScript (including Jquery)",
-            "Scss": "SCSS preprocessor",
-            "GitHub": "Git & GitHub (basics)",
-            "Responsive": "Responsive Layout",
-            "Owl": "Owl Carousel plugin"
+            "CSS": "CSS (включаючи CSS Grid та CSS Flexbox)",
+            "JavaScript": "JavaScript (включаючи Jquery)",
+            "Scss": "препроцессор SCSS",
+            "GitHub": "Git & GitHub (основи)",
+            "Responsive": "Адаптивна верстка",
+            "Owl": "плагін Owl Carousel"
         },
         "i-have-created":
         {
-            "i-have-created-text": "I Have Created"
+            "i-have-created-text": "Я зробив"
         },
         "projects":
         {
             "project1":{
-                "title": "OG website Landing",
-                "date": "Finished on 16/09/2019",
-                "description": "The landing contains a lot of carousels, and i thought it will be a good practise for me",
-                "original": "Original"
+                "title": "Верстка сайту OG",
+                "date": "Закінчена 16/09/2019",
+                "description": "Головна сторінка містить багато каруселей, і я подумав що це буде хорошою практикою для мене",
+                "original": "Оригінал"
             },
             "project2":{
-                "title": "Kapkan website Landing",
-                "date": "Finished on 22/08/2019",
-                "description": "Here, tried to make all carousels by myself. Not my best practise, but still i want you to see it.",
-                "original": "Original"
+                "title": "Верстка сайту Kapkan",
+                "date": "Закінчена 22/08/2019",
+                "description": "Тут я намагався зробити усі каруселі саморучно. Це не було найкращою ідеєю, але я все одно хочу це виставити",
+                "original": "Оригінал"
             }
         },
         "footer":{
-            "last-text": "I hope i gave you the experience you expected."
+            "last-text": "Сподіваюсь що я задовільнив ваші очікування."
+        }
+    },
+
+
+
+
+    "rus":{
+        "landing":
+        {
+            "moto": "В делаю веб сайты в своё всободное время",
+            "who-am-i": "Яновский Никита <br> Веб-разработчик",
+            "scroll-or-yes": "Скроль или да"
+        },
+        "about":
+        {
+            "who-am-i(1)": "Яновский Никита ",
+            "who-am-i(2)": "Веб-розробник - самоучка",
+            "a-little-bit": "<span>Немного о себе</span>",
+            "biography": "Я восемнадцатилетний студент Ужгородского Национального университета, факультет інформационных технологий.Я увлекаюсь веб разработкой со старшой школы. К сожалению университет даёт только поверхносные знания, поэтому углублённую часть я учу сам. Мне нравится этот процесс обучения, и сейчас я уверенный в своих знаниях."
+        },
+        "skills-abilities":
+        {
+            "title": "Умения & <br>Способности<div class='skills-background-block background-block'></div>",
+            "skills-abilities-intro": "Последние 2 года я изучал<br>веб-дизайн, и сейчас я владею<br><span>знаниями</span>",
+            "CSS": "CSS (включая CSS Grid и CSS Flexbox)",
+            "JavaScript": "JavaScript (включая Jquery)",
+            "Scss": "препроцессор SCSS",
+            "GitHub": "Git & GitHub (основы)",
+            "Responsive": "Адаптивная верстка",
+            "Owl": "плагин Owl Carousel"
+        },
+        "i-have-created":
+        {
+            "i-have-created-text": "Я сделал"
+        },
+        "projects":
+        {
+            "project1":{
+                "title": "Верстка сайта OG",
+                "date": "Закончена 16/09/2019",
+                "description": "Главная страница содержит много каруселей, и я подумал что это будет хорошей практикой для меня",
+                "original": "Оригинал"
+            },
+            "project2":{
+                "title": "Верстка сайта Kapkan",
+                "date": "Закончена 22/08/2019",
+                "description": "Тут я пытался сделать все карусели вручную. Это не была хорошая идея, но я всё равно хочу это выставить",
+                "original": "Оригинал"
+            }
+        },
+        "footer":{
+            "last-text": "Надеюсь что я удовлетворил ваши ожидания."
         }
     }
 }
